@@ -23,7 +23,7 @@ func main() {
 	if err != nil {
 		log.Fatal("No Key Found. Use Recipe API key")
 	}
-	const apiKey = "RECIPE_API_KEY"
+	apiKey := os.Getenv("RECIPE_API_KEY")
 	if len(os.Args) < 2 {
 		fmt.Println("Usage: go run main.go QUERY")
 		os.Exit(1)
